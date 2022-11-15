@@ -1,5 +1,5 @@
 # .github/workflows/main.yml
-name: notarizador-web
+name: notarizador-web-deploy
 on:
   pull_request:
     branches: [ master ]
