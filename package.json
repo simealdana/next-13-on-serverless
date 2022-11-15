@@ -49,7 +49,7 @@
     "test:e2e": "playwright test",
     "test:unit:watch": "jest --watch",
     "test:unit": "jest",
-    "deploy": "./bash-deploy"
+    "deploy": "./bash-deploy --stage uat"
   },
   "version": "0.1.0"
 }
