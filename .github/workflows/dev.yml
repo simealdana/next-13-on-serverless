@@ -1,5 +1,5 @@
 # .github/workflows/main.yml
-name: notarizador-web-deploy
+name: notarizador-web-deploy-dev
 on:
   push:
     branches: [ master ]
@@ -21,4 +21,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET }}
           aws-region: us-east-1
       - name: Deploy Notarizador Web
-        run: npm run deploy
+        run: ./bash-deploy-dev

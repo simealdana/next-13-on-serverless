@@ -40,7 +40,7 @@ custom:
     external:
       - "next"
   customDomain:
-    domainName: testnext.capybaraontezos.xyz
+    domainName: ${opt:stage, 'dev'}-testnext.capybaraontezos.xyz
     basePath: ''
-    stage: dev
+    stage: ${opt:stage, 'dev'}
     createRoute53Record: true
