@@ -49,7 +49,8 @@
     "test:e2e": "playwright test",
     "test:unit:watch": "jest --watch",
     "test:unit": "jest",
-    "deploy": "./bash-deploy --stage uat"
+    "deploy:dev": "./bash-deploy-dev",
+    "deploy:uat": "./bash-deploy-uat"
   },
   "version": "0.1.0"
 }
