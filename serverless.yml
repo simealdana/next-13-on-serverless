@@ -1,0 +1,46 @@
+# serverless.yml
+
+service: serverless-next-v2
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: us-east-1
+  apiGateway:
+    shouldStartNameWithService: true
+    binaryMediaTypes:
+      - "*/*"
+
+functions:
+  api:
+    handler: server.handler
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
+
+plugins:
+  - serverless-esbuild
+  - serverless-domain-manager
+
+package:
+  patterns:
+    - ".next"
+    - "node_modules"
+    - "public"
+    - "_next"
+    - "next.config.js"
+    - "next-i18next.config.js"
+    - "package.json"
+
+custom:
+  esbuild:
+    bundle: true
+    minify: true
+    exclude: "*"
+    external:
+      - "next"
+  customDomain:
+    domainName: testnext.capybaraontezos.xyz
+    basePath: ''
+    stage: dev
+    createRoute53Record: true

@@ -1,0 +1,5 @@
+.next
+.dist
+.serverless*
+node_modules
+yarn.lock
