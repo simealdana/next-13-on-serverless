@@ -1,6 +1,6 @@
 # serverless.yml
 
-service: serverless-next-v2
+service: verde-client-v2
 
 provider:
   name: aws
