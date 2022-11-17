@@ -1,5 +1,5 @@
 # .github/workflows/main.yml
-name: notarizador-web-deploy-dev
+name: verde-client-deploy-dev
 on:
   push:
     branches: [ master ]

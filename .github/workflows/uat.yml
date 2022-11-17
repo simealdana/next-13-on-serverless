@@ -1,5 +1,5 @@
 # .github/workflows/main.yml
-name: notarizador-web-deploy-uat
+name: verde-client-deploy-uat
 on:
   push:
     branches: [ uat ]
